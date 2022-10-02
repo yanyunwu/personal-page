@@ -1,0 +1,28 @@
+.IndexHome-home {
+    height: calc(100vh - 90px);
+}
+
+.IndexHome-home .IndexHome-title{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 20%;
+}
+.IndexHome-home h1 {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 900px)  {
+    .IndexHome-home h1 {
+        font-size: 40px;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 500px)  {
+    .IndexHome-home h1 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+}

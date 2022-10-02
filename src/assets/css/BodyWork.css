@@ -1,0 +1,57 @@
+.BodyWork-work {
+    padding: 80px 0;
+}
+
+.BodyWork-workList {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.BodyWork-work h3 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.BodyWork-workListItem {
+    width: 300px;
+    height: 250px;
+    margin: 20px 10px;
+    margin-top: 0;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    transition: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.BodyWork-workListItem:hover {
+    box-shadow: rgb(0 0 0 / 20%) 0 10px 30px;
+}
+
+.BodyWork-workListItem img {
+    width: 100%;
+    height: 155px;
+}
+
+.BodyWork-workListItem > div {
+    padding: 0 15px;
+}
+
+.BodyWork-workListItemIntro > * {
+    margin: 5px 0;
+}
+
+.BodyWork-workListItemIntro > h4 {
+    font-size: large;
+}
+
+.BodyWork-workListItemIntro > p{
+    font-size: small;
+}

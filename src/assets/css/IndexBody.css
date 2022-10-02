@@ -1,0 +1,7 @@
+.IndexBody-body {
+    background-color: rgb(245, 245, 245);
+}
+
+.IndexBody-about, .IndexBody-other {
+    background-color: white;
+}

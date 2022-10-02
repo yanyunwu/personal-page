@@ -1,0 +1,13 @@
+:root {
+  --index-background-image: url("https://hzau-online.oss-cn-hangzhou.aliyuncs.com/bg3.jpg")
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: 0.25s;
+}
+
+html, body {
+  transition: none;
+}

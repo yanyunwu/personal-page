@@ -1,0 +1,88 @@
+@import "IndexHeader.css";
+@import "IndexHome.css";
+@import "IndexBody.css";
+@import "BodyAbout.css";
+@import "BodyWork.css";
+@import "IndexFooter.css";
+
+/* 设置应用容器 */
+#app {
+  position: relative;
+  height: 100vh;
+  background-image: var(--index-background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: auto;
+}
+
+.loading {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  background: #0099CC;
+  justify-content: center;
+}
+
+/* 小竖条 */
+.loadingItem {
+  height: 50px;
+  width: 5px;
+  background: white;
+  /* 加margin，使竖条之间有空隙 */
+  margin: 0px 3px;
+  /* 圆角 */
+  border-radius: 10px;
+  /* 动画：名称、时间、循环 */
+  animation: loading 1s infinite;
+}
+
+/* 设置动画 */
+@keyframes loading {
+  0% {
+    height: 0px;
+  }
+
+  50% {
+    height: 50px;
+  }
+
+  100% {
+    height: 0px;
+  }
+}
+
+/* 为每一个竖条设置延时 */
+.loadingItem:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loadingItem:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loadingItem:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.loadingItem:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.loadingItem:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.loadingItem:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.loadingItem:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+

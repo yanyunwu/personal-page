@@ -1,0 +1,38 @@
+.BodyAbout-about {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.BodyAbout-about h3 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.BodyAbout-tagBox {
+    display: flex;
+    justify-content: center;
+}
+
+.BodyAbout-tagBox span{
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(245, 245, 245);
+    color: rgba(0, 0, 0, .6);
+    margin: 0 3px;
+    transition: .3s;
+}
+
+.BodyAbout-tagBox span:hover {
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.BodyAbout-intro p{
+    text-align: center;
+    margin: 14px 0;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .8);
+}
