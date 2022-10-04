@@ -1,4 +1,4 @@
-import {state} from "vactapp";
+import { state } from "vactapp";
 
 export default function () {
 

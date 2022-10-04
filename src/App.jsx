@@ -1,4 +1,4 @@
-import {defineState, watch} from 'vactapp'
+import { defineState, watch, defineComponent } from 'vactapp'
 import IndexHeader from './components/IndexHeader'
 import IndexHome from "@/components/IndexHome";
 import IndexBody from "@/components/IndexBody";
@@ -8,41 +8,40 @@ import './assets/css/App.css'
 import store from "@/store";
 
 
-function App() {
+const App = defineComponent(function ({life}) {
 
   /** 初始化响应式数据 */
   const data = defineState({
     headerFixed: false,
-    scrolNumber: 0,
+    scrollNumber: 0,
     windowHeight: 0,
     loading: true
   })
 
-  function scrollToTop(e)  {
-    data.scrolNumber = e.target.scrollTop
+  let scrollToTop = (e) => {
+    data.scrollNumber = e.target.scrollTop
   }
 
   function windowGetHeight() {
     data.windowHeight = document.documentElement.clientHeight
   }
 
-  window.addEventListener('load', () => {
-    data.loading = false
-  })
+  window.addEventListener('load', () => data.loading = false)
 
-  window.addEventListener('DOMContentLoaded', () => {
+  life.mounted(() => {
     const app = document.getElementById('app')
     app.addEventListener('scroll', scrollToTop)
     windowGetHeight()
     window.addEventListener('resize', windowGetHeight)
   })
 
-  watch(() => data.scrolNumber > data.windowHeight - 90, (o, n) => {
+  // 监听高度变化
+  watch(() => data.scrollNumber > data.windowHeight - 90, (o, n) => {
     data.headerFixed = n;
   })
 
   return (
-    <div id="app" style={{'background-image': `url(${store.backgroundImg})`}}>
+    <div>
       <div className="container">
         <IndexHeader fixed={data.headerFixed} />
         <IndexHome/>
@@ -52,7 +51,6 @@ function App() {
       <IndexLoading loading={data.loading} />
     </div>
   )
-}
-
+})
 
 export default <App />

@@ -2,7 +2,7 @@ import {defineState} from "vactapp";
 import store from '../store'
 
 
-export default class {
+export default class IndexHeader {
   constructor() {
     this.data = defineState({
       aList: [
@@ -28,7 +28,7 @@ export default class {
   render() {
     return (
       <div id="header" style="height: 90px;">
-        <div className={this.props.fixed ? 'IndexHeader-headerFixed IndexHeader-header' : 'IndexHeader-header'}>
+        <div className={{ 'IndexHeader-headerFixed': this.props.fixed, 'IndexHeader-header': true }} >
           <div className="IndexHeader-logo">
             <img className="IndexHeader-logoImg" src={require('@/assets/image/delicious.png')} />
             <span className="IndexHeader-logoName">
@@ -43,7 +43,5 @@ export default class {
       </div>
     )
   }
-
-
 }
 
